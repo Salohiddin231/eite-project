@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+svg {
+  color: $accent;
+}
+
+li {
+  list-style: none;
+}
+
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+body {
+  min-height: 100vh;
+  background: $bg;
+  transition: background 0.5s;
+}
+
+// === Карточки и кнопки ===
+.card,
+.project-card,
+.purchased-item {
+  background: $card-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  .card-title,
+  .project-text {
+    font-family: $heading-font;
+  }
+
+  .card-price,
+  .project-price {
+    font-family: $price-font;
+  }
+}
+
+.btn-accent,
+.project-buy-button {
+  background: $accent;
+  color: #fff;
+  font-family: $price-font;
+  border-radius: $radius;
+  border: none;
+  padding: 10px 28px;
+  font-weight: 600;
+  transition: background 0.2s, box-shadow 0.2s, filter 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// === Общие отступы и скругления ===
+section,
+.content,
+.projects,
+.services {
+  border-radius: $radius;
+  padding: 32px 24px;
+  background: $content-bg;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+
+
+.btn-primary,
+.btn-secondary {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: $radius;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  color: $white;
+  background: $accent;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.reklama {
+  width: 1200px;
+  height: 400px;
+  padding: 20px 0;
+}

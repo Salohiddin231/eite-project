@@ -1,0 +1,25 @@
+.app {
+    display: flex;
+    transition: margin-left 0.3s ease;
+
+    // &.sidebar-open .app__content {
+    //     margin-left: 240px;
+    // }
+
+    // &:not(.sidebar-open) .app__content {
+    //     margin-left: 100px;
+    // }
+
+    .app__content {
+        flex: 1;
+        transition: margin-left 0.3s ease;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// .toast {
+//     position: fixed !important;
+//     z-index: 9999;
+// }

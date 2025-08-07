@@ -1,0 +1,78 @@
+// @import './variables';
+
+.services {
+  padding: 100px 20px;
+  // background-color: $primary-color;
+  text-align: center;
+
+  h2 {
+    font-size: 42px;
+    margin-bottom: 16px;
+    font-family: $heading-font;
+    color: $text-color
+  }
+
+  &-subtitle {
+    font-size: 18px;
+    color: $gray;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+    font-family: $body-font;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .service-card {
+    background: $card-bg;
+    padding: 32px 24px;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 200px;
+      height: 200px;
+      background: $accent;
+      opacity: 0.1;
+      border-radius: 50%;
+      transition: all 0.4s ease;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-hover;
+
+      &::before {
+        transform: scale(1.2);
+        opacity: 0.08;
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      color: $accent;
+      margin-bottom: 12px;
+      font-family: $heading-font;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-light;
+      line-height: 1.5;
+      font-family: $body-font;
+    }
+  }
+}
