@@ -80,28 +80,38 @@ export default function Header() {
           <nav>
             <ul className="header-list">
               <NavLink to={"/"}>Главная</NavLink>
+              <hr className='header-hr' />
               <NavLink to={"/projects"}>Продукты</NavLink>
+              <hr className='header-hr' />
               {hasToken && (
-                <li className="header-item">
-                  <NavLink to="/purchases" className="header-link">
-                    <div className="header-link-content">
-                      корзинка
-                      <FaShoppingCart />
-                    </div>
-                  </NavLink>
-                </li>
+                <>
+                  <li className="header-item">
+                    <NavLink to="/purchases" className="header-link">
+                      <div className="header-link-content">
+                        корзинка
+                        <FaShoppingCart />
+                      </div>
+                    </NavLink>
+
+                  </li>
+                  <hr className='header-hr' />
+                </>
               )}
               {hasToken && (
-                <li className="header-item">
-                  <NavLink to="/favorites" className="header-link">
-                    <div className="header-link-content">
-                      избранные
-                      <FaHeart />
-                    </div>
-                  </NavLink>
-                </li>
+                <>
+                  <li className="header-item">
+                    <NavLink to="/favorites" className="header-link">
+                      <div className="header-link-content">
+                        избранные
+                        <FaHeart />
+                      </div>
+                    </NavLink>
+                  </li>
+                  <hr className='header-hr' />
+                </>
               )}
               <NavLink to={"/about"}>О нас</NavLink>
+              <hr className='header-hr' />
               <NavLink to={"/contact"}>Контакты</NavLink>
             </ul>
           </nav>

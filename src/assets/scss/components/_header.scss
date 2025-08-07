@@ -14,11 +14,20 @@
     transform: translateY(0);
   }
 
+  &-hr {
+    height: 50px;
+    width: 2px;
+    background: linear-gradient($white, $blue, $white);
+    border: none;
+  }
+
   &-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 40px;
+
+
 
     .active {
       &::after {
